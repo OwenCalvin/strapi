@@ -187,12 +187,12 @@ export class ExamplePage extends React.Component {
               }
             },
             buttons: [
-              rowInfo.node.parent[0] && rowInfo.node.parent[0] === this.props.templates._id ? 
+              rowInfo.node.parent[0] && (this.props.templates && rowInfo.node.parent[0] === this.props.templates._id) ? 
               <div></div> : <button onClick={() => {this.addNew(rowInfo.node._id, rowInfo.path[rowInfo.path.length - 1], getNodeKey);}}>+</button>,
-              rowInfo.node._id !== this.props.templates._id ? <button onClick={() => {
+              /*rowInfo.node._id !== this.props.templates._id ? */ <button onClick={() => {
                 this.updateView(rowInfo.node);
                 this.setState({toDeleteElement: rowInfo, showModalElement: true});
-              }}>-</button> : <div></div>
+              }}>-</button> /*: <div></div>*/
             ]
           })}>
           </SortableTree>
@@ -299,6 +299,7 @@ export class ExamplePage extends React.Component {
     const selectedElement = this.fields();
     const renderBtn = (!!this.props.selected && this.props.selected._id !== '') ? (
       <div>
+        {this.props.templates ?
         <div className={styles.mb_25}>
           <h2>Import a template</h2>
           <InputSelect
@@ -316,7 +317,7 @@ export class ExamplePage extends React.Component {
           value='Select...'
           selectOptions={['Select...', ...(this.props.templates.children.map(obj => obj['title']))]}
           placeholder='Select...'/>
-        </div>
+        </div>:null}
         <div className={styles.mb_25}>
           <Button
           primary
