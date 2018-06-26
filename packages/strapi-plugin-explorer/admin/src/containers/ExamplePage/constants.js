@@ -1,0 +1,11 @@
+export const LOAD_DATA = 'ExamplePage/LOAD_DATA';
+export const LOADED_DATA = 'ExamplePage/LOADED_DATA';
+export const SET_ELEMENTS = 'ExamplePage/SET_ELEMENTS';
+export const SET_SELECTED = 'ExamplePage/SET_SELECTED';
+export const PERSIST = 'ExamplePage/PERSIST';
+export const PERSISTED = 'ExamplePage/PERSISTED';
+export const ADD = 'ExamplePage/ADD';
+export const ADDED = 'ExamplePage/ADDED';
+export const DEL = 'ExamplePage/DEL';
+export const DELETED = 'ExamplePage/DELETED';
+export const SET_TEMPLATES = 'ExamplePage/SET_TEMPLATES';

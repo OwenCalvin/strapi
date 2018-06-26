@@ -126,6 +126,11 @@ shell.cd('../strapi-email-sendmail');
 watcher('📦  Linking strapi-email-sendmail...', 'npm link --no-optional', false);
 
 // Plugins with admin
+shell.cd('../strapi-plugin-explorer');
+watcher('', 'npm install ../strapi-helper-plugin --no-optional');
+shell.rm('-f', 'package-lock.json');
+watcher('📦  Linking strapi-plugin-explorer...', 'npm link --no-optional', false);
+
 shell.cd('../strapi-plugin-email');
 shell.rm('-f', 'package-lock.json');
 watcher('', 'npm install ../strapi-helper-plugin --no-optional');

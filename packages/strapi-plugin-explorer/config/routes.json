@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/",
+      "handler": "Explorer.index",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/elements",
+      "handler": "Explorer.getElements",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/templates",
+      "handler": "Explorer.getTemplates",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/elements",
+      "handler": "Explorer.addElement",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/elements",
+      "handler": "Explorer.setElement",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/elements/del",
+      "handler": "Explorer.delElement",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -104,6 +104,9 @@ module.exports = (scope, cb) => {
     },{
       name: 'upload',
       core: true
+    },{
+      name: 'explorer',
+      core: true
     }];
 
     // Install each plugin.

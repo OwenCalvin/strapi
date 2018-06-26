@@ -9,6 +9,7 @@ const _ = require('lodash');
 const mongoose = require('mongoose');
 const Mongoose = mongoose.Mongoose;
 const mongooseUtils = require('mongoose/lib/utils');
+const autoPopulate = require('mongoose-autopopulate')
 
 // Strapi helpers for models.
 const { models: utilsModels }  = require('strapi-utils');
@@ -187,7 +188,8 @@ module.exports = function (strapi) {
                       ref: value.ref,
                       localField: '_id',
                       foreignField: value.via,
-                      justOne: value.justOne || false
+                      justOne: value.justOne || false,
+                      autopopulate: true
                     });
                   });
 
@@ -224,6 +226,8 @@ module.exports = function (strapi) {
                       });
                     }
                   };
+
+                  instance.plugin(autoPopulate)
 
                   // Instantiate model.
                   const Model = instance.model(definition.globalId, collection.schema, definition.collectionName);
