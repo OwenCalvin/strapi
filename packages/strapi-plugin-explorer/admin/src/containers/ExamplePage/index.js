@@ -428,7 +428,10 @@ ExamplePage.propTypes = {
     PropTypes.object
   ]),
   setTemplates: PropTypes.func,
-  templates: PropTypes.array,
+  templates: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object
+  ]),
   del: PropTypes.func,
   add: PropTypes.func,
   persist: PropTypes.func,
