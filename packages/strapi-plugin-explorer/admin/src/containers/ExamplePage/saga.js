@@ -10,12 +10,7 @@ import {
 export function* loadData() {
   try {
     const elements = yield call(request, '/explorer/elements', { method: 'get' });
-    const templates = yield call(request, '/explorer/templates', { method: 'get' });
-    console.log(templates);
-    yield put(loadedData({
-      elements: elements,
-      templates: templates
-    }));
+    yield put(loadedData({elements: elements}));
   } catch(err) {
     strapi.notification.error('Server error');
     console.log(err.response.payload);
