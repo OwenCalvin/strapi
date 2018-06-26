@@ -23,6 +23,12 @@
 
 <br>
 
+## Eplorer
+1) Fist of all Run Strapi in development mode.
+2) Create a page name "Templates" (with uppercase) and then you can manage your content.  
+(automatic in the next vesion)  
+
+
 ## Quick start
 
 We've been working on a major update to Strapi for several months now, rewriting the core framework and the administration panel. Performances has been increased, Developer eXperience has been improved and a brand new plugins
